@@ -19,7 +19,6 @@ Projeto acadêmico em **Free Pascal/Lazarus** com banco **PostgreSQL** via SQLdb
 
 ```text
 ProjetoLazarus/
-├── CLAUDE.md
 ├── README.md
 ├── config.ini
 ├── docs/
