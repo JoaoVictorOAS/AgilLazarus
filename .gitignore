@@ -1,0 +1,17 @@
+# Binários e saída do compilador
+src/lib/
+src/*.exe
+src/*.o
+src/*.ppu
+src/*.res
+src/backup/
+
+# DLLs do PostgreSQL (não versionar)
+src/*.dll
+
+# Configuração local com credenciais
+src/config.ini
+
+# Arquivos de projeto Lazarus gerados
+src/*.lps
+backup/

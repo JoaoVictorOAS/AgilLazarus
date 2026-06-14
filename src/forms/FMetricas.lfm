@@ -1,0 +1,304 @@
+object FormMetricas: TFormMetricas
+  Left = -69
+  Height = 775
+  Top = 227
+  Width = 1125
+  Caption = 'Métricas do Projeto'
+  ClientHeight = 775
+  ClientWidth = 1125
+  Color = clBtnFace
+  DesignTimePPI = 120
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  LCLVersion = '4.6.0.0'
+  OnCreate = FormCreate
+  object PnlTopo: TPanel
+    Left = 0
+    Height = 55
+    Top = 0
+    Width = 1125
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 55
+    ClientWidth = 1125
+    ParentBackground = False
+    TabOrder = 0
+    object LblProjeto: TLabel
+      Left = 10
+      Height = 21
+      Top = 18
+      Width = 53
+      Caption = 'Projeto:'
+    end
+    object CmbProjeto: TComboBox
+      Left = 80
+      Height = 29
+      Top = 12
+      Width = 275
+      ItemHeight = 21
+      Style = csDropDownList
+      TabOrder = 0
+      OnChange = CmbProjetoChange
+    end
+    object LblSprint: TLabel
+      Left = 370
+      Height = 21
+      Top = 18
+      Width = 45
+      Caption = 'Sprint:'
+    end
+    object CmbSprint: TComboBox
+      Left = 435
+      Height = 29
+      Top = 12
+      Width = 250
+      ItemHeight = 21
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object BtnAtualizar: TButton
+      Left = 700
+      Height = 35
+      Top = 10
+      Width = 112
+      Caption = 'Atualizar'
+      TabOrder = 2
+      OnClick = BtnAtualizarClick
+    end
+    object BtnFechar: TButton
+      Left = 1015
+      Height = 35
+      Top = 10
+      Width = 100
+      Caption = 'Fechar'
+      TabOrder = 3
+      OnClick = BtnFecharClick
+    end
+  end
+  object PnlCards: TPanel
+    Left = 0
+    Height = 112
+    Top = 55
+    Width = 1125
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 112
+    ClientWidth = 1125
+    Color = clBtnFace
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 1
+    object PnlHorasPts: TPanel
+      Left = 10
+      Height = 92
+      Top = 10
+      Width = 250
+      ClientHeight = 92
+      ClientWidth = 250
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 0
+      object LblHorasPtsTit: TLabel
+        Left = 10
+        Height = 20
+        Top = 10
+        Width = 135
+        Caption = 'Horas / Story Point'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LblHorasPtsVal: TLabel
+        Left = 10
+        Height = 35
+        Top = 45
+        Width = 20
+        Caption = '--'
+        Font.Height = -25
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object PnlLeadTime: TPanel
+      Left = 280
+      Height = 92
+      Top = 10
+      Width = 250
+      ClientHeight = 92
+      ClientWidth = 250
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 1
+      object LblLeadTimeTit: TLabel
+        Left = 10
+        Height = 20
+        Top = 10
+        Width = 120
+        Caption = 'Lead Time Médio'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LblLeadTimeVal: TLabel
+        Left = 10
+        Height = 35
+        Top = 45
+        Width = 20
+        Caption = '--'
+        Font.Height = -25
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object PnlBugs: TPanel
+      Left = 550
+      Height = 92
+      Top = 10
+      Width = 250
+      ClientHeight = 92
+      ClientWidth = 250
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 2
+      object LblBugsTit: TLabel
+        Left = 10
+        Height = 20
+        Top = 10
+        Width = 95
+        Caption = 'Total de Bugs'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LblBugsVal: TLabel
+        Left = 10
+        Height = 35
+        Top = 45
+        Width = 20
+        Caption = '--'
+        Font.Height = -25
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object PnlTaxaBugs: TPanel
+      Left = 820
+      Height = 92
+      Top = 10
+      Width = 250
+      ClientHeight = 92
+      ClientWidth = 250
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 3
+      object LblTaxaBugsTit: TLabel
+        Left = 10
+        Height = 20
+        Top = 10
+        Width = 92
+        Caption = 'Taxa de Bugs'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object LblTaxaBugsVal: TLabel
+        Left = 10
+        Height = 35
+        Top = 45
+        Width = 20
+        Caption = '--'
+        Font.Height = -25
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+  end
+  object PnlCharts: TPanel
+    Left = 0
+    Height = 608
+    Top = 167
+    Width = 1125
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 608
+    ClientWidth = 1125
+    ParentBackground = False
+    TabOrder = 2
+    object PnlVelocity: TPanel
+      Left = 0
+      Height = 608
+      Top = 0
+      Width = 562
+      Align = alLeft
+      BevelOuter = bvNone
+      ClientHeight = 608
+      ClientWidth = 562
+      ParentBackground = False
+      TabOrder = 0
+      object LblVelocityTit: TLabel
+        Left = 10
+        Height = 20
+        Top = 8
+        Width = 55
+        Caption = 'Velocity'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object SgVelocity: TStringGrid
+        Left = 0
+        Height = 572
+        Top = 36
+        Width = 562
+        Align = alBottom
+        ColCount = 3
+        FixedCols = 0
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing]
+        RowCount = 1
+        TabOrder = 0
+        ColWidths = (
+          150
+          188
+          188
+        )
+      end
+    end
+    object PnlBurndown: TPanel
+      Left = 562
+      Height = 608
+      Top = 0
+      Width = 563
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 608
+      ClientWidth = 563
+      ParentBackground = False
+      TabOrder = 1
+      object LblBurndownTit: TLabel
+        Left = 10
+        Height = 20
+        Top = 8
+        Width = 73
+        Caption = 'Burndown'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object SgBurndown: TStringGrid
+        Left = 0
+        Height = 572
+        Top = 36
+        Width = 563
+        Align = alBottom
+        ColCount = 2
+        FixedCols = 0
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing]
+        RowCount = 1
+        TabOrder = 0
+        ColWidths = (
+          275
+          250
+        )
+      end
+    end
+  end
+end
