@@ -13,7 +13,6 @@ Projeto acadêmico em **Free Pascal/Lazarus** com banco **PostgreSQL** via SQLdb
 - Lazarus 3.x (LCL)
 - PostgreSQL 16
 - SQLdb (`TPQConnection`, `TSQLTransaction`, `TSQLQuery`)
-- TAChart (`TChart`) para gráficos
 
 ## Estrutura do repositório
 
@@ -21,14 +20,6 @@ Projeto acadêmico em **Free Pascal/Lazarus** com banco **PostgreSQL** via SQLdb
 ProjetoLazarus/
 ├── README.md
 ├── config.ini
-├── docs/
-│   ├── AGENT_DATABASE.md
-│   ├── AGENT_MEMBROS.md
-│   ├── AGENT_PROJETOS.md
-│   ├── AGENT_SPRINTS.md
-│   ├── AGENT_TAREFAS.md
-│   ├── AGENT_HORAS.md
-│   └── AGENT_METRICAS.md
 ├── sql/
 │   └── create_database.sql
 └── src/
